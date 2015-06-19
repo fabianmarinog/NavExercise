@@ -1,0 +1,344 @@
+/*
+By Fabian Mariño 2015
+*/
+body {
+  color: #000;
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover, a:active{
+  text-decoration: none;
+}
+
+.container{
+  overflow: hidden;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-nav, .navbar{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+  background-color: #ec008c;
+}
+
+.navbar ul, .navbar-header{
+  list-style:none;
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0;
+}
+
+.navbar-header{
+  padding: 24px 48px 24px 24px;
+}
+
+.navbar-brand, .hamburger-icon, .close-icon{
+  text-indent: -10000px;
+}
+
+.navbar-brand{
+  display: block;
+  background-image: url(../images/HUGE-small.png);
+  height: 24px;
+  background-position: 0 -60px;
+  width: 60px;
+}
+
+.navbar-brand:hover{
+    background-position: 0 -114px;
+}
+
+.navbar-brand:active{
+    background-position: 0 -168px;
+    background-color: white;
+}
+
+.navbar ul a{
+  display:block;
+  color:#FFF;
+  text-decoration:none;
+  font: 21px/48px 'HUGEAvantGardeBold';
+  padding: 12px 24px;
+}
+
+.navbar ul a:hover, .navbar ul a:active, .navbar ul li.dropdown > a{
+  color: #ec008c;
+}
+
+.navbar ul li{
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0;
+}
+
+.navbar ul li:hover, .navbar ul li.dropdown{
+  background:#fff;
+}
+
+.navbar ul ul{
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#fff;
+  padding:0;
+  z-index: 1000;
+}
+
+.navbar ul ul, .dropdown-mask, .hamburger-icon, .close-icon, .copyright{
+  display:none;
+}
+
+.navbar ul ul li{
+  float:none;
+  width:230px;
+}
+
+.navbar ul ul li:hover{
+  background:#eee;
+}
+
+.navbar ul ul a{
+  color: #000;
+  font: 16px/48px 'Galaxie';
+  padding:0 24px;
+}
+
+.navbar ul li.dropdown > ul{
+  display:block;
+}
+
+.main-message{
+  background: url(../images/background-image.jpg) no-repeat center center;
+  width:1280px;
+  height: 640px;
+}
+
+.main-message h1{
+  color: #FFF;
+  font: 120px/132px 'HUGEAvantGardeBold';
+  margin: 132px;
+  display: inline-block;
+  width: 80%
+}
+
+.content{
+  width: 968px;
+  padding-top: 36px;
+  font:24px/36px 'Galaxie';
+  margin: 0 auto;
+}
+
+.dropdown-mask{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 748px;
+  position: absolute;
+  z-index: 100;
+  top: 72px;
+}
+
+.downArrow span, .downArrow.dropdown{
+  background: none;
+  width: auto;
+}
+
+.nav-container{
+    position: relative;
+    width: auto;
+    background-color: inherit;
+    height: auto;
+    display: block;
+    transition: none;
+}
+
+.main-content{
+  position: relative;
+  left: 0;
+  transition: none;
+}
+
+/* Desktop Media query 
+These styles will be applied when user resizes window
+*/
+
+@media (min-width: 768px) {
+  .navbar-brand, .nav-container{
+    display: block !important;
+  }
+
+  .hamburger-icon, .close-icon, .copyright {
+    display: none !important;
+  }
+}
+
+
+/* Mobile Media query 
+These styles will be applied to elements if viewport is less than 768px
+*/
+@media (max-width: 767px) {
+    .hamburger-icon{
+      background: url(../images/toggle-open.svg) no-repeat center;
+      height: 24px;
+      width: 24px;
+      margin-right: 24px;
+      display: block;
+    }
+
+    .navbar-nav, .navbar-brand, .close-icon{
+      display: none;
+    }
+
+     .navbar-nav{
+        display: block;
+     }
+
+    .navbar-header {
+      padding: 20px 24px;
+      width: 90%;
+      height: 24px;
+    }
+
+    .navbar-brand{
+      width: 50px;
+      margin-right: 24px;
+      background-position: 0 -50px;
+      background-size: 105%;
+      display: none;
+      float: left;
+    }
+
+    .navbar-brand:hover{
+       background-position: 0 -92px;
+       background-size: 100%;
+    }
+
+    .navbar-brand:active{
+        background-position: 0px -138px;
+        background-size: 100%;
+    }
+
+    .close-icon{
+      background: url(../images/toggle-close.svg) no-repeat center;
+      height: 20px;
+      width: 24px;
+      margin-left: 48px;
+      display: none;
+      float: right;
+    }
+
+    .main-message{
+      width: auto;
+      height: 240px;
+      background-size: 100% 100%;
+      display: inline-block;
+    }
+
+    .main-message h1{
+      color: #000;
+      margin: 290px 0 0 0;
+      font: 44px/48px 'HUGEAvantGardeBold';
+      width: 90%;
+      padding: 0 24px;
+      text-align: left;
+    }
+
+    .content{
+      font:14px/24px 'Galaxie';
+      padding: 50px 24px 0 24px;
+      width: auto;
+      text-align: left;
+    }
+
+    .copyright{
+      font: 12px/16px 'Helvetica Neue Regular', Helvetica, Arial, sans-serif;
+      display: block;
+      margin: 50% 0 0 24px;
+      height: 48px;
+    }
+
+    .navbar ul li, .navbar ul, .navbar-header{
+      float: none;
+    }
+
+    .navbar ul a{
+      color: #000;
+    }
+
+    .navbar-header{
+      background-color: #ec008c;
+    }
+
+    .dropdown-mask{
+      top:64px;
+    }
+
+    .navbar ul li:hover, .navbar ul li.dropdown{
+      background:#eee;  
+    }
+
+    .navbar ul ul{
+      position: relative;
+    }
+
+    .navbar ul ul li{
+      width: 100%;
+    }
+
+    .downArrow span{
+      background: url(../images/downArrow.png) no-repeat center right;
+      width: 22px;
+      height: 14px;
+      display: block;
+      float: right;
+      padding: 16px 0;
+    }
+
+    .downArrow.dropdown span{
+      position: relative;
+      overflow: hidden;
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    .nav-container{
+      position: absolute;
+      width: 80%;
+      background-color: #FFF;
+      height: auto;
+      z-index: 200;
+      display: none;
+      left: -100%;
+    }
+
+    .nav-container, .main-content{
+      transition: left 1s;
+    }
+
+    .nav-displayed{
+      left: 0;
+    }
+
+    .content-displayed{
+      left: 78%;
+    }
+}
